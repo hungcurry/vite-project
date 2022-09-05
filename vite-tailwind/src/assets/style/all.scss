@@ -1,0 +1,24 @@
+//-----------------
+// tailwindcss
+//-----------------
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+//-----------------
+// config
+//-----------------
+@import "config/variables";
+@import "config/mixins";
+@import "config/import";
+@import "config/base2";
+
+//-----------------
+// layout
+//-----------------
+@import "layout/grid";
+
+//-----------------
+// modules
+//-----------------
+@import "modules/tailwind";
