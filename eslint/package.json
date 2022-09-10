@@ -1,0 +1,27 @@
+{
+  "name": "eslint-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslintInit": "eslint --init",
+    "format": "prettier -w ./src stylelint **/*.css --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "postcss": "^8.4.16",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.4",
+    "stylelint": "^14.11.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}
