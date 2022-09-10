@@ -1,7 +1,7 @@
 //*-------------------------*/
 //* @mixin
 //*-------------------------*/
-@use "@style/config/variables" as var;
+@use '@style/config/variables' as var;
 
 $primary: blue;
 
@@ -84,7 +84,7 @@ $primary: blue;
   background-color: $bgColor;
 }
 // 背景圖片
-@mixin bgUrl($url: url("../../assets/images/xxxxx.jpg")) {
+@mixin bgUrl($url: url('../../assets/images/xxxxx.jpg')) {
   background-image: $url;
   background-size: cover;
   background-position: center center;
@@ -101,7 +101,7 @@ $primary: blue;
 }
 // 偽元素
 @mixin fakePseudo($width: 100%, $height: auto, $backgroundColor: #000) {
-  content: " ";
+  content: ' ';
   display: block;
   width: $width;
   height: $height;

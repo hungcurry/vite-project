@@ -1,11 +1,11 @@
 //*-------------------------*/
 //* tailwind
 //*-------------------------*/
-@use "@style/config/variables" as var;
-@use "@style/config/mixins" as min;
+@use '@style/config/variables' as var;
+@use '@style/config/mixins' as mix;
 
 .box {
-  @include min.flexbox-row-center;
+  @include mix.flexbox-row-center;
   h2 {
     @apply text-center text-8xl;
   }
@@ -25,7 +25,13 @@
   }
   .card {
     @apply mt-4 rounded-lg bg-fb-card px-4 py-3;
-    color: $primary;
+    color: var.$primary;
+    @include mix.pad(768) {
+      width: 10rem;
+    }
+    @include mix.desktop(1024) {
+      width: 20rem;
+    }
   }
   .popover-btn {
     @apply ml-2 flex h-[39px] w-[39px] cursor-pointer items-center justify-center rounded-full bg-fb-popover p-2.5 active:bg-fb-active;

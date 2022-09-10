@@ -2,7 +2,7 @@
 // import { ref , reactive } from "vue";
 // import { defineStore } from 'pinia'
 
-export const CountStore = defineStore("count", () => {
+export const CountStore = defineStore('count', () => {
   const num = ref(0);
   const addCount = () => {
     num.value++;

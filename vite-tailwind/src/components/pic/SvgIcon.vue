@@ -9,20 +9,20 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: "#333",
+    default: '#333',
   },
 });
 //console.log(`props` , props);
 
 const svgName = computed(() => {
-  if (props.name.includes("/")) {
+  if (props.name.includes('/')) {
     return `#${props.name}`;
   } else {
     return `#/${props.name}`;
   }
 });
 const svgClass = computed(() =>
-  props.className ? "svg-icon " + props.className : "svg-icon"
+  props.className ? 'svg-icon ' + props.className : 'svg-icon',
 );
 </script>
 

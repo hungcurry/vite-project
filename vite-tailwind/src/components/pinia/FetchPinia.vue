@@ -5,13 +5,13 @@
 
 // 統一入口載入
 // import { useFetchStore } from "../../stores/index.js"
-import { useFetchStore } from "@/stores/index.js";
+import { useFetchStore } from '@/stores/index.js';
 const FetchStore = useFetchStore();
 const { useName, isLoad, errorMessage } = storeToRefs(FetchStore);
 const { reactiveAry, FetchInit } = FetchStore;
 
 const fetchClick = () => {
-  FetchInit("http://www.mocky.io/v2/5cc3f5723400005d00765480");
+  FetchInit('http://www.mocky.io/v2/5cc3f5723400005d00765480');
 };
 </script>
 <template>

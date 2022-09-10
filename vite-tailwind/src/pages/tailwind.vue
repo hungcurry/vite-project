@@ -40,9 +40,10 @@
   </div>
 </template>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 // 只會拿到最後載入的藍色 如要重新拿取顏色要指定
-@import "@style/config/variables";
+// @import "@style/config/variables";
+
 @media (min-width: 1024px) {
   .tailwind {
     margin-top: 50px;
@@ -53,14 +54,14 @@ h1 {
 }
 .card {
   width: 16rem;
-  color: $primary;
-  font-size: $font-4xl;
-  // @include flexbox-row-center;
-  // @include pad(768) {
-  //   width: 26rem;
-  // }
-  // @include desktop(1024) {
-  //   width: 40rem;
-  // }
+  color: var.$primary;
+  font-size: var.$font-4xl;
+  @include flexbox-row-center;
+  @include pad(768) {
+    width: 26rem;
+  }
+  @include desktop(1024) {
+    width: 40rem;
+  }
 }
 </style>

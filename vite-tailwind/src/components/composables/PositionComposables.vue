@@ -4,21 +4,21 @@
 
 // 統一入口載入
 // import { usePosition } from '../../composables/index.js'
-import { usePosition } from "@/composables/index.js";
+import { usePosition } from '@/composables/index.js';
 const { refName, refObj, reactiveObj } = usePosition();
-console.log("composables 座標範例", refName, refObj, reactiveObj);
+console.log('composables 座標範例', refName, refObj, reactiveObj);
 /* 普通函式 或 pinia-
 解構ref裡面的值 無法在解構
 */
 const { X, Y } = refObj;
-console.log("X", X, "Y", Y);
+console.log('X', X, 'Y', Y);
 
 /* 普通函式 或 pinia-
 解構reactive裡面的值 會失去特性
 要再用toRefs 讓裡面的值雙向綁定
 */
 const { X2, Y2 } = toRefs(reactiveObj);
-console.log("X2", X2, "Y2", Y2);
+console.log('X2', X2, 'Y2', Y2);
 console.log(`-----------`);
 </script>
 <template>

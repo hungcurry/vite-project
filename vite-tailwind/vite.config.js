@@ -13,6 +13,8 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 // 自動引入 router
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts';
+// 壓縮
+import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,7 +30,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/assets/style/all";'
+        additionalData: `
+          // @import "@/assets/style/config/variables"; 
+          @use "@/assets/style/config/variables" as var; 
+          @import "@/assets/style/config/mixins";
+        `
       }
     },
     devSourcemap : true,
@@ -36,27 +42,33 @@ export default defineConfig({
   sever:{
     https : false ,
     cors: true, // 允許跨域
-    open: '/', // 瀏覽器自動開啟
-    port:8080, //專案啟動時自定義埠
+    open: true, // 瀏覽器自動開啟
+    port:8080, // 專案啟動時自定義埠
     hmr : true // hot reload
   },
   build: {
-    target: 'es2015', /*  */
-    // 移除console
+    target: 'es2015',
     terserOptions: {
       compress: {
+        // 清除console和debugger
         drop_console: true,
         drop_debugger: true,
       },
+      output: {
+        // 去掉註釋內容
+        comments: true,
+      },
     },
-    brotliSize: false, /* 壓縮大型輸出文件可能會很慢，因此禁用該功能可能會提高大型項目的構建性能 */
-    outDir: 'dist', /* 指定輸出路徑 */
-    cssCodeSplit: false, /* 整個項目中的所有 CSS 變一個 CSS 文件中 */
-    chunkSizeWarningLimit: 1500, /* chunk 大小警告的限制（以 kbs 為單位） */
-    sourcemap: false, /* source map 文件 */
-    manifest: true, /*  */
-    assetsDir: 'static/img/', /* 靜態資源的存放路徑 */
-    emptyOutDir: true, /* 默認情況下，若 outDir 在 root 目錄下，則 Vite 會在建構時清空該目錄 */
+    reportCompressedSize: false, // 壓縮大型輸出文件可能會很慢，因此禁用該功能可能會提高大型項目的構建性能
+    outDir: 'dist', // 指定輸出路徑
+    minify : false , // 壓縮css
+    cssTarget: 'chrome61', // 針對非主流css瀏覽器時使用
+    cssCodeSplit: false, // 整個項目中的所有 CSS 變一個 CSS 文件中
+    chunkSizeWarningLimit: 1500, // chunk 大小警告的限制（以 kbs 為單位）
+    sourcemap: false, // source map 文件
+    manifest: true, // 
+    assetsDir: 'static/img/', // 靜態資源的存放路徑
+    emptyOutDir: true, // 默認情況下，若 outDir 在 root 目錄下，則 Vite 會在建構時清空該目錄
     rollupOptions: {
       output: {
         chunkFileNames: 'static/js/[name].[hash].js',
@@ -81,6 +93,14 @@ export default defineConfig({
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), "src/assets/svg")],
       symbolId: "[dir]/[name]",
+    }),
+    viteCompression({ 
+      // 靜態資源壓縮配置
+      verbose: true,
+      disable: false,
+      threshold: 10240,
+      algorithm: 'gzip',
+      ext: '.gz',
     }),
     Pages(),
     Layouts(),

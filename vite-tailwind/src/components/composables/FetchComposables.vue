@@ -4,11 +4,11 @@
 
 // 統一入口 index.js 載入
 // import { useFetch } from '../../composables/index.js'
-import { useFetch } from "@/composables/index.js";
+import { useFetch } from '@/composables/index.js';
 const { ary, useName, FetchInit } = useFetch();
 
 const fetchClick = () => {
-  FetchInit("http://www.mocky.io/v2/5cc3f5723400005d00765480");
+  FetchInit('http://www.mocky.io/v2/5cc3f5723400005d00765480');
 };
 </script>
 <template>

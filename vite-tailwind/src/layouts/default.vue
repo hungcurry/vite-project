@@ -19,6 +19,7 @@
     <RouterLink to="/fetch">Fetch</RouterLink>
     <RouterLink to="/position">Position</RouterLink>
     <RouterLink to="/tailwind">Tailwind</RouterLink>
+    <RouterLink to="/test">test</RouterLink>
   </nav>
   <RouterView />
 </template>

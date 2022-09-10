@@ -2,7 +2,7 @@
 // 有自動引入 可省略
 // import { storeToRefs } from "pinia";
 
-import { useCountStore } from "@/stores/index.js";
+import { useCountStore } from '@/stores/index.js';
 const CounterStore = useCountStore();
 
 const { num } = storeToRefs(CounterStore);

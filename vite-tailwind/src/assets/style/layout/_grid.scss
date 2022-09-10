@@ -8,20 +8,20 @@ $grid-breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1280px,
-  "2xl": "1536px",
+  '2xl': '1536px',
 ) !default;
 
 $spacer: 1rem !default;
 $spacers: () !default;
 $spacers: map-merge(
   (
-    "0": 0,
-    "1": 0.8rem,
-    "2": 1.6rem,
-    "3": 2.4rem,
-    "4": 3.2rem,
-    "5": 4rem,
-    "6": 4.8rem,
+    '0': 0,
+    '1': 0.8rem,
+    '2': 1.6rem,
+    '3': 2.4rem,
+    '4': 3.2rem,
+    '5': 4rem,
+    '6': 4.8rem,
   ),
   $spacers
 );
@@ -82,7 +82,7 @@ $container-max-widths: (
   &.no-gutters {
     margin-right: 0;
     margin-left: 0;
-    > [class*="col-"] {
+    > [class*='col-'] {
       padding-right: 0;
       padding-left: 0;
     }

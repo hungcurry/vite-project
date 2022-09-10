@@ -1,7 +1,7 @@
 //*-------------------------*/
 //* base
 //*-------------------------*/
-@use "@style/config/variables" as var;
+@use '@style/config/variables' as var;
 
 // *, *::before, *::after{
 //   box-sizing: border-box;
@@ -10,8 +10,8 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
-    "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC',
+    'Microsoft JhengHei', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   font-size: 1.6rem;
   font-weight: 400;
