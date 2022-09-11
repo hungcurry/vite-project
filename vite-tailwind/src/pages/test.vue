@@ -26,6 +26,8 @@ abcFn2();
 
   <!-- header menu -->
   <ul
+    v-for="(item, idx) in reactiveAry.data"
+    :key="item.name"
     class="navbox fixed left-0 bottom-0 z-50 flex w-full items-center justify-between bg-fb-header text-white lg:static lg:left-auto lg:bottom-auto lg:w-auto lg:justify-center"
   >
     <li
@@ -51,8 +53,20 @@ abcFn2();
 h1 {
   font-size: 24px;
 }
+
 .card {
   width: 16rem;
   color: $primary;
+}
+
+.js-contactPerson::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  z-index: 10;
+  width: 10px;
+  height: 125%;
+  transform: translateY(-50%);
 }
 </style>
