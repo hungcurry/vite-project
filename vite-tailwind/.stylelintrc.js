@@ -30,6 +30,9 @@ module.exports = {
     'alpha-value-notation': 'number',
     'scss/no-global-function-names': null,
     'scss/comment-no-empty': null,
+    'scss/at-function-pattern': null, // 取消駝峰式
+    'scss/at-mixin-pattern': null,// 取消駝峰式
+    'at-rule-empty-line-before': null, // Mix include前不空行
     'order/properties-order': [
       'content',
       'position',

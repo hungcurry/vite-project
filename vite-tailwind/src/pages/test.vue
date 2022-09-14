@@ -8,7 +8,6 @@ const refObj = ref({
 
 const abcFn = () => {
   console.log(`89798`);
-  debugger;
 };
 abcFn();
 const abcFn2 = a => a + 2;
@@ -26,8 +25,6 @@ abcFn2();
 
   <!-- header menu -->
   <ul
-    v-for="(item, idx) in reactiveAry.data"
-    :key="item.name"
     class="navbox fixed left-0 bottom-0 z-50 flex w-full items-center justify-between bg-fb-header text-white lg:static lg:left-auto lg:bottom-auto lg:w-auto lg:justify-center"
   >
     <li

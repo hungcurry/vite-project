@@ -7,7 +7,6 @@ import router from './router';
 import 'virtual:svg-icons-register';
 // 只放共用的class
 import '@style/all.scss';
-
 const app = createApp(App);
 
 app.use(createPinia());

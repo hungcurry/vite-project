@@ -43,19 +43,20 @@
 <style lang="scss" scoped>
 // 只會拿到最後載入的藍色 如要重新拿取顏色要指定
 // @import "@style/config/variables";
-
 @media (min-width: 1024px) {
   .tailwind {
     margin-top: 50px;
   }
 }
+
 h1 {
   font-size: 24px;
 }
+
 .card {
   width: 16rem;
-  color: var.$primary;
   font-size: var.$font-4xl;
+  color: var.$primary;
   @include flexbox-row-center;
   @include pad(768) {
     width: 26rem;

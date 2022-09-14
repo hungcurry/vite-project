@@ -19,14 +19,16 @@ const { addCount } = CounterStore;
 </template>
 <style lang="scss" scoped>
 h2 {
-  color: red;
   font-size: 50px;
+  color: red;
 }
+
 button {
   display: block;
   padding: 15px;
   font-size: 14px;
 }
+
 @media (min-width: 1024px) {
   .count {
     margin-top: 50px;
