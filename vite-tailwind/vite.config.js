@@ -46,7 +46,9 @@ export default () => {
   
           // custom
           // @import "@/assets/style/config/variables";
+          @import "@/assets/style/config/functions";
           @import "@/assets/style/config/mixins";
+          @import "@/assets/style/config/extend";
         `,
         },
       },

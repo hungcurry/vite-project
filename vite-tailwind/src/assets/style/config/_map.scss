@@ -8,7 +8,7 @@ $theme-box: () !default;
 $theme-box: map-merge(
   (
     "primary": blue,
-    "danger": red,
+    "danger": rgb(241, 22, 165),
     "secondary": orange,
   ),
   $theme-box

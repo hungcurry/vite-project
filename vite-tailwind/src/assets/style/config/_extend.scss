@@ -1,0 +1,24 @@
+// *-------------------------*/
+// * @extend
+// *-------------------------*/
+
+// ! @extend %box-set;
+// --------------
+// 相同設定
+// --------------
+%box-set {
+  float: left;
+  margin-right: 1rem;
+  width: 30rem;
+  height: 30rem;
+}
+
+%flex-shrink {
+  flex-shrink: 0;
+  order: 1;
+}
+
+// 消除藍框
+%focus {
+  outline: none;
+}
